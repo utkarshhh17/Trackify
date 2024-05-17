@@ -42,7 +42,7 @@ export default function Product(){
 
 
     const handleClick=()=>{
-        axios.put('http://3.81.235.13:8081/products', responseData)
+        axios.put('http://'+process.env.REACT_APP_IP+':8081/products', responseData)
             .then((response) => {               
                 const json=response.data;
                 if (response.status === 200) {

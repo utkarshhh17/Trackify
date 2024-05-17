@@ -53,8 +53,9 @@ public class ProductService {
 
     public Product sendEmailIfDecreased(Product product, int oldPrice, int newPrice) {
 
-        productWebClient.sendEmailPriceDrop(product);
+
         product.setPrice(newPrice);
+        productWebClient.sendEmailPriceDrop(product);
 
 
 
